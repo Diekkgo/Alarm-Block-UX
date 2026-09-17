@@ -14,12 +14,13 @@
 }
 
 .login-description {
+    margin-top: 48px;
+    margin-bottom: 36px;
     color: var(--gray);
     font-size: 20px;
     line-height: 20px;
 }
 
-/* Formulario */
 .form-label {
     color: var(--navy);
 }
@@ -38,7 +39,6 @@
     color: var(--navy);
 }
 
-/* Botones */
 .continue-button,
 .google-button {
     height: 52px;
@@ -50,6 +50,7 @@
     color: var(--navy);
     background-color: var(--gold);
     border-color: var(--gold);
+    margin-top: 28px;
 }
 
 .continue-button:hover,
@@ -73,7 +74,8 @@
 }
 
 .separator {
-    height: 34px;
+    margin-top: 24px;
+    margin-bottom: 24px;
     color: var(--gray);
 }
 

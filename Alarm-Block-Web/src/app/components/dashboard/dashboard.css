@@ -1,0 +1,80 @@
+.dashboard {
+    padding: 37px 75px 0;
+}
+
+.dashboard-title {
+    color: var(--navy);
+    font-size: 48px;
+    line-height: 20px;
+}
+
+
+.metrics-row {
+    margin-top: 87px;
+}
+
+.metric-card {
+    width: 350px;
+    height: 161px;
+    border-radius: 8px;
+}
+
+.metric-card .card-body {
+    padding: 23px 23px;
+}
+
+.metric-value {
+    color: var(--navy);
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+.admin-section {
+    margin-top: 77px;
+}
+
+.admin-title {
+    color: var(--gray);
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.admin-section hr {
+    margin-top: 24px;
+    border-color: var(--gray);
+}
+
+.admin-row {
+    margin-top: 43px;
+}
+
+
+.admin-card {
+    width: 350px;
+    height: 161px;
+    border-radius: 8px;
+}
+
+.admin-card .card-body {
+    padding: 23px;
+}
+
+.admin-card-title {
+    color: var(--navy);
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.admin-button {
+    color: var(--navy);
+    border-color: var(--navy);
+    border-radius: 8px;
+}
+
+.admin-button:hover,
+.admin-button:focus {
+    color: var(--white);
+    background-color: var(--navy);
+    border-color: var(--navy);
+}
