@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --gold: #F5A623;
+    --lavender: #B9BFDD;
+    --cream: #FFFBF2;
+    --black: #000000;
+    --success: #2E8B57;
+    --alert: #D64545;
+    --navy: #1E2664;
+    --white: #FFFFFF;
+    --gray: #888888;
+
+    --principal-font-family: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--principal-font-family);
+}

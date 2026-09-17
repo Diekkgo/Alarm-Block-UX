@@ -1,0 +1,85 @@
+:host {
+    display: block;
+}
+
+.login-content {
+    width: 505px;
+    padding-top: 190px;
+}
+
+.login-title {
+    color: var(--navy);
+    font-size: 48px;
+    line-height: 20px;
+}
+
+.login-description {
+    color: var(--gray);
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* Formulario */
+.form-label {
+    color: var(--navy);
+}
+
+.form-control:focus {
+    border-color: var(--navy);
+    box-shadow: none;
+}
+
+
+.recover-password {
+    color: var(--navy);
+}
+
+.recover-password:hover {
+    color: var(--navy);
+}
+
+/* Botones */
+.continue-button,
+.google-button {
+    height: 52px;
+    font-size: 24px;
+    border-radius: 6px;
+}
+
+.continue-button {
+    color: var(--navy);
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+.continue-button:hover,
+.continue-button:focus {
+    color: var(--navy);
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+.google-button {
+    color: var(--navy);
+    background-color: var(--white);
+    border-color: var(--navy);
+}
+
+.google-button:hover,
+.google-button:focus {
+    color: var(--navy);
+    background-color: var(--white);
+    border-color: var(--navy);
+}
+
+.separator {
+    height: 34px;
+    color: var(--gray);
+}
+
+@media (max-width: 576px) {
+    .login-content {
+        width: 100%;
+        padding: 120px 24px 0;
+    }
+}
