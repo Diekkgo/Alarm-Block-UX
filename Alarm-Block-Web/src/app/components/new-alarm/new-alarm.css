@@ -1,0 +1,119 @@
+.new-alarm {
+    padding: 48px 24px 16px;
+}
+
+.back-link {
+    color: var(--gray);
+    font-size: var(--back-button-font-size);
+}
+
+.back-link:hover {
+    color: var(--gray);
+}
+
+.back-arrow {
+    font-size: var(--back-button-font-size);
+    line-height: 1;
+}
+
+.new-alarm-title {
+    color: var(--navy);
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.field-label {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.field-select {
+    width: 100%;
+    max-width: 360px;
+    color: var(--navy);
+}
+
+
+.days-selector {
+    gap: 12px;
+}
+
+.day-btn {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--navy);
+    background-color: var(--white);
+    color: var(--navy);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .15s ease, background-color .15s ease;
+}
+
+.day-btn:hover,
+.day-btn.active {
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+
+.time-selector {
+    gap: 28px;
+}
+
+.time-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--navy);
+    background-color: var(--white);
+    color: var(--navy);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.time-btn:hover {
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.time-value {
+    color: var(--navy);
+    font-size: 40px;
+    font-weight: 600;
+    min-width: 170px;
+    text-align: center;
+}
+
+
+.save-button {
+    width: 100%;
+    max-width: 360px;
+    height: 52px;
+    font-size: 20px;
+    color: var(--navy);
+    background-color: var(--gold);
+    border-color: var(--gold);
+    border-radius: 6px;
+}
+
+.save-button:hover,
+.save-button:focus {
+    color: var(--navy);
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+@media (max-width: 576px) {
+    .new-alarm {
+        padding: 24px 24px 0;
+    }
+
+    .days-selector {
+        flex-wrap: wrap;
+    }
+}
