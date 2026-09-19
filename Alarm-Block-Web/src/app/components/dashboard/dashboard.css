@@ -1,5 +1,7 @@
 .dashboard {
-    padding: 37px 75px 0;
+    width: 100%;
+    padding: 109px 69px 324px 75px;
+    box-sizing: border-box;
 }
 
 .dashboard-title {
@@ -32,6 +34,14 @@
 
 .admin-section {
     margin-top: 77px;
+    width: 100%;
+}
+
+.admin-divider {
+    width: 100%;
+    border-color: var(--gray);
+    color: var(--gray);
+    opacity: 0.4;
 }
 
 .admin-title {
@@ -77,4 +87,14 @@
     color: var(--white);
     background-color: var(--navy);
     border-color: var(--navy);
+}
+
+.metric-column:nth-child(2),
+.admin-column:nth-child(2) {
+    margin-left: 117px;
+}
+
+.metric-column:nth-child(3),
+.admin-column:nth-child(3) {
+    margin-left: 126px;
 }

@@ -25,6 +25,8 @@
           class="form-control"
           id="form-email"
           placeholder="tucorreo@ejemplo.com"
+          name="email"
+          [(ngModel)]="email"
         >
       </div>
 
@@ -40,6 +42,8 @@
           type="password"
           class="form-control"
           id="form-password"
+          name="password"
+          [(ngModel)]="password"
         >
 
         <a
@@ -53,6 +57,7 @@
       <button
         type="submit"
         class="btn continue-button w-100 fw-semibold mt-4"
+        (click)="login()"
       >
         Continuar
       </button>
