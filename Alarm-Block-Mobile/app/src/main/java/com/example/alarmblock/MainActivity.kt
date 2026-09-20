@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.alarmblock.data.AlarmDraftState
 import com.example.alarmblock.navigation.AlarmBlockRoutes
 import com.example.alarmblock.ui.screens.HomeScreen
+import com.example.alarmblock.ui.screens.MandatoryMissionConfirmationScreen
 import com.example.alarmblock.ui.screens.MandatoryMissionScreen
 import com.example.alarmblock.ui.screens.NewAlarmConfirmationScreen
 import com.example.alarmblock.ui.screens.NewAlarmLimitsScreen
@@ -89,10 +90,20 @@ class MainActivity : ComponentActivity() {
                             MandatoryMissionScreen(
                                 onVerify = { answer ->
                                     if (answer == "12") {
-                                        navController.navigate(AlarmBlockRoutes.Home) {
-                                            popUpTo(AlarmBlockRoutes.Home) {
-                                                inclusive = false
-                                            }
+                                        navController.navigate(
+                                            AlarmBlockRoutes.MandatoryMissionConfirmation
+                                        )
+                                    }
+                                }
+                            )
+                        }
+
+                        composable(AlarmBlockRoutes.MandatoryMissionConfirmation) {
+                            MandatoryMissionConfirmationScreen(
+                                onBackToAlarm = {
+                                    navController.navigate(AlarmBlockRoutes.StartAlarm) {
+                                        popUpTo(AlarmBlockRoutes.StartAlarm) {
+                                            inclusive = false
                                         }
                                     }
                                 }

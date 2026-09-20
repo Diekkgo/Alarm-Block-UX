@@ -10,4 +10,5 @@ object AlarmBlockRoutes {
     const val NewAlarmConfirmation = "new_alarm_confirmation"
     const val StartAlarm = "start_alarm"
     const val MandatoryMission = "mandatory_mission"
+    const val MandatoryMissionConfirmation = "mandatory_mission_confirmation"
 }
