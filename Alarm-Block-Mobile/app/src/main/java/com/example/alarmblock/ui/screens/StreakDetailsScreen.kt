@@ -2,6 +2,7 @@ package com.example.alarmblock.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -69,7 +70,10 @@ fun StreakDetailsScreen(
                     start = 18.dp,
                     top = 20.dp
                 )
-                .height(30.dp),
+                .height(30.dp)
+                .clickable {
+                    onBack()
+                },
             verticalAlignment = Alignment.CenterVertically
         ) {
             Icon(
