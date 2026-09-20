@@ -1,0 +1,103 @@
+.history {
+    height: 100vh;
+    padding: 48px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.back-link {
+    color: var(--gray);
+    font-size: var(--back-button-font-size);
+}
+
+.back-link:hover {
+    color: var(--gray);
+}
+
+.back-arrow {
+    font-size: var(--back-button-font-size);
+    line-height: 1;
+}
+
+.history-title {
+    color: var(--navy);
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.weeks-select {
+    align-self: flex-start;
+    width: 351px;
+    height: 38px;
+    color: var(--navy);
+}
+
+
+.chart-section {
+    flex: 0 1 190px;
+    min-height: 0;
+}
+
+.chart-bar-col {
+    flex-shrink: 0;
+    width: 240px;
+}
+
+.chart-bar {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.chart-bar--gold {
+    background-color: var(--gold);
+}
+
+.chart-bar--gray {
+    background-color: #E4E4E4;
+}
+
+.chart-bar-label {
+    color: var(--gray);
+}
+
+
+.records-label {
+    color: var(--gray);
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.record-row {
+    padding: 12px 0;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.record-date {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.record-status {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.record-status--success {
+    color: var(--success);
+}
+
+.record-status--alert {
+    color: var(--alert);
+}
+
+@media (max-width: 576px) {
+    .history {
+        padding: 24px 24px 0;
+    }
+
+    .chart-section {
+        overflow-x: auto;
+    }
+}

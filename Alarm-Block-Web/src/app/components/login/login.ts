@@ -27,5 +27,9 @@ export class Login {
 
     this.router.navigate(['/dashboard'])
   }
-  
+
+  continueWithGoogle(){
+    this.router.navigate(['/dashboard'])
+  }
+
 }

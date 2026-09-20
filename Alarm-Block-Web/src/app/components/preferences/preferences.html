@@ -1,0 +1,75 @@
+<main class="container-fluid preferences">
+
+    <a routerLink="/dashboard" class="back-link d-inline-flex align-items-center text-decoration-none mb-3">
+        <span class="back-arrow me-2" aria-hidden="true">&lsaquo;</span> Dashboard
+    </a>
+
+    <h1 class="preferences-title fw-normal mb-3">
+        Preferencias
+    </h1>
+
+    <section class="preference-row d-flex justify-content-between align-items-center">
+        <div>
+            <h2 class="preference-item-title fw-semibold mb-1">Notificaciones push</h2>
+            <p class="text-secondary mb-0">Recordatorios en tu celular</p>
+        </div>
+
+        <div class="form-check form-switch mb-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="push-notifications" checked>
+        </div>
+    </section>
+
+    <hr class="preference-divider">
+
+    <section class="preference-row d-flex justify-content-between align-items-center">
+        <div>
+            <h2 class="preference-item-title fw-semibold mb-1">Notificaciones por correo</h2>
+            <p class="text-secondary mb-0">Resumen semanal de tu hábito</p>
+        </div>
+
+        <div class="form-check form-switch mb-0">
+            <input class="form-check-input" type="checkbox" role="switch" id="email-notifications" checked>
+        </div>
+    </section>
+
+    <hr class="preference-divider mb-5">
+
+    <div class="timezone-field mb-5">
+        <label for="timezone" class="preference-item-title fw-semibold mb-2 d-block">Zona horaria</label>
+        <select id="timezone" class="form-select timezone-select">
+            <option selected>Bogotá, Colombia (GMT -5)</option>
+            <option>Ciudad de México, México (GMT -6)</option>
+            <option>Madrid, España (GMT +1)</option>
+            <option>Buenos Aires, Argentina (GMT -3)</option>
+        </select>
+    </div>
+
+    <button type="button" class="btn save-button fw-semibold" (click)="onSave()">
+        Guardar Cambios
+    </button>
+
+    <div class="saved-modal-backdrop" *ngIf="showSavedModal()">
+        <div class="saved-modal">
+            <div class="saved-modal-header d-flex justify-content-between align-items-center">
+                <h2 class="saved-modal-title fw-bold mb-0">Preferencias</h2>
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    aria-label="Cerrar"
+                    (click)="closeModal()"
+                >&times;</button>
+            </div>
+
+            <div class="saved-modal-body">
+                <p class="mb-0">Sus cambios se guardaron correctamente</p>
+            </div>
+
+            <div class="saved-modal-footer d-flex justify-content-end">
+                <button type="button" class="btn saved-modal-close fw-semibold" (click)="closeModal()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,85 @@
+<main class="container-fluid new-alarm">
+
+    <a routerLink="/dashboard" class="back-link d-inline-flex align-items-center text-decoration-none mb-4">
+        <span class="back-arrow me-2" aria-hidden="true">&lsaquo;</span> Dashboard
+    </a>
+
+    <h1 class="new-alarm-title fw-normal mb-4">
+        Nueva alarma recurrente
+    </h1>
+
+    <form class="new-alarm-form">
+
+        <p class="field-label text-uppercase mb-2">Dias</p>
+
+        <div class="days-selector d-flex mb-4">
+            <button
+                type="button"
+                *ngFor="let day of days; let i = index"
+                class="day-btn"
+                [class.active]="isDaySelected(i)"
+                [attr.aria-pressed]="isDaySelected(i)"
+                [attr.aria-label]="day.fullName"
+                (click)="toggleDay(i)"
+            >{{ day.label }}</button>
+        </div>
+
+        <p class="field-label mb-2">Hora</p>
+
+        <div class="time-selector d-flex align-items-center mb-4">
+            <button type="button" class="time-btn" aria-label="Aumentar hora">+</button>
+            <span class="time-value">6:30 AM</span>
+            <button type="button" class="time-btn" aria-label="Disminuir hora">-</button>
+        </div>
+
+        <div class="mb-4">
+            <label for="mission-type" class="form-label field-label mb-2">Tipo de misión</label>
+            <select id="mission-type" class="form-select field-select">
+                <option>Operación matemática</option>
+                <option>Escanear código QR</option>
+                <option>Foto del lugar</option>
+                <option>Memorizar secuencia</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="snooze-limit" class="form-label field-label mb-2">Límite de posponer</label>
+            <select id="snooze-limit" class="form-select field-select">
+                <option>Sin límite</option>
+                <option>1 vez</option>
+                <option>2 veces</option>
+                <option selected>3 veces</option>
+            </select>
+        </div>
+
+        <button type="button" class="btn save-button fw-semibold mt-2" (click)="onSave()">
+            Guardar y sincronizar
+        </button>
+
+    </form>
+
+    <div class="saved-modal-backdrop" *ngIf="showSavedModal()">
+        <div class="saved-modal">
+            <div class="saved-modal-header d-flex justify-content-between align-items-center">
+                <h2 class="saved-modal-title fw-bold mb-0">Nueva alarma recurrente</h2>
+                <button
+                    type="button"
+                    class="btn-close-modal"
+                    aria-label="Cerrar"
+                    (click)="closeModal()"
+                >&times;</button>
+            </div>
+
+            <div class="saved-modal-body">
+                <p class="mb-0">Su alarma se creó correctamente</p>
+            </div>
+
+            <div class="saved-modal-footer d-flex justify-content-end">
+                <button type="button" class="btn saved-modal-close fw-semibold" (click)="closeModal()">
+                    Volver al inicio
+                </button>
+            </div>
+        </div>
+    </div>
+
+</main>

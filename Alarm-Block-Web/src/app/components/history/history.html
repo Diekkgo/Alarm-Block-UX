@@ -1,0 +1,79 @@
+<main class="container-fluid history">
+
+    <a routerLink="/dashboard" class="back-link d-inline-flex align-items-center text-decoration-none mb-3">
+        <span class="back-arrow me-2" aria-hidden="true">&lsaquo;</span> Dashboard
+    </a>
+
+    <h1 class="history-title fw-normal mb-3">
+        Historial
+    </h1>
+
+    <select class="form-select weeks-select mb-3">
+        <option>últimas 5 semanas</option>
+        <option>últimas 10 semanas</option>
+        <option>últimas 4 semanas</option>
+    </select>
+
+    <section class="chart-section d-flex align-items-end justify-content-center">
+
+        <div class="chart-bar-col d-flex flex-column align-items-center">
+            <div class="chart-bar chart-bar--gold" style="height: 140px;"></div>
+            <span class="chart-bar-label mt-2">S1</span>
+        </div>
+
+        <div class="chart-bar-col d-flex flex-column align-items-center">
+            <div class="chart-bar chart-bar--gray" style="height: 70px;"></div>
+            <span class="chart-bar-label mt-2">S2</span>
+        </div>
+
+        <div class="chart-bar-col d-flex flex-column align-items-center">
+            <div class="chart-bar chart-bar--gold" style="height: 110px;"></div>
+            <span class="chart-bar-label mt-2">S3</span>
+        </div>
+
+        <div class="chart-bar-col d-flex flex-column align-items-center">
+            <div class="chart-bar chart-bar--gray" style="height: 70px;"></div>
+            <span class="chart-bar-label mt-2">S4</span>
+        </div>
+
+        <div class="chart-bar-col d-flex flex-column align-items-center">
+            <div class="chart-bar chart-bar--gold" style="height: 160px;"></div>
+            <span class="chart-bar-label mt-2">S5</span>
+        </div>
+
+    </section>
+
+    <section class="records-section">
+
+        <p class="records-label text-uppercase text-secondary mb-2">
+            Últimos registros
+        </p>
+
+        <div class="record-row d-flex justify-content-between align-items-center">
+            <span class="record-date text-secondary">Lun 17 ago - Trabajo</span>
+            <span class="record-status record-status--success">Sin posponer</span>
+        </div>
+
+        <div class="record-row d-flex justify-content-between align-items-center">
+            <span class="record-date text-secondary">Mar 18 ago - Trabajo</span>
+            <span class="record-status record-status--alert">Pospuesta 2 veces</span>
+        </div>
+
+        <div class="record-row d-flex justify-content-between align-items-center">
+            <span class="record-date text-secondary">Mie 19 ago - Trabajo</span>
+            <span class="record-status record-status--success">Sin posponer</span>
+        </div>
+
+        <div class="record-row d-flex justify-content-between align-items-center">
+            <span class="record-date text-secondary">Jue 20 ago - Gimnasio</span>
+            <span class="record-status record-status--success">Sin posponer</span>
+        </div>
+
+        <div class="record-row d-flex justify-content-between align-items-center">
+            <span class="record-date text-secondary">Vie 21 ago - Gimnasio</span>
+            <span class="record-status record-status--alert">Pospuesta 2 veces</span>
+        </div>
+
+    </section>
+
+</main>

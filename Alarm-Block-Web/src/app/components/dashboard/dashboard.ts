@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   imports: [
-    RouterModule
+    RouterModule,
+    RouterLink
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
