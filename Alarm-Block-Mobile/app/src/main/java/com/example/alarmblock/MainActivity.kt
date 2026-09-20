@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.alarmblock.data.AlarmDraftState
 import com.example.alarmblock.navigation.AlarmBlockRoutes
 import com.example.alarmblock.ui.screens.HomeScreen
+import com.example.alarmblock.ui.screens.MandatoryMissionScreen
 import com.example.alarmblock.ui.screens.NewAlarmConfirmationScreen
 import com.example.alarmblock.ui.screens.NewAlarmLimitsScreen
 import com.example.alarmblock.ui.screens.NewAlarmSetupScreen
@@ -79,8 +80,22 @@ class MainActivity : ComponentActivity() {
                                     navController.popBackStack()
                                 },
                                 onSnooze = {
-                                    navController.popBackStack()
+                                    navController.navigate(AlarmBlockRoutes.MandatoryMission)
                                 },
+                            )
+                        }
+
+                        composable(AlarmBlockRoutes.MandatoryMission) {
+                            MandatoryMissionScreen(
+                                onVerify = { answer ->
+                                    if (answer == "12") {
+                                        navController.navigate(AlarmBlockRoutes.Home) {
+                                            popUpTo(AlarmBlockRoutes.Home) {
+                                                inclusive = false
+                                            }
+                                        }
+                                    }
+                                }
                             )
                         }
                     }

@@ -9,4 +9,5 @@ object AlarmBlockRoutes {
     const val NewAlarmLimits = "new_alarm_limits"
     const val NewAlarmConfirmation = "new_alarm_confirmation"
     const val StartAlarm = "start_alarm"
+    const val MandatoryMission = "mandatory_mission"
 }

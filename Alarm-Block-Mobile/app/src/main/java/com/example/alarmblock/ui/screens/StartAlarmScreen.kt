@@ -142,6 +142,7 @@ fun StartAlarmScreen(
                     defaultElevation = 0.dp,
                     pressedElevation = 0.dp
                 )
+
             ) {
                 Text(
                     text = "Posponer",
