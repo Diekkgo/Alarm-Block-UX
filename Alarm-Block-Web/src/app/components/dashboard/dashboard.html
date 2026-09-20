@@ -1,12 +1,12 @@
-<main class="container-fluid dashboard">
+<div class="dashboard">
 
     <h1 class="dashboard-title fw-normal mb-0">
         Hola, Camila
     </h1>
 
-    <section class="row metrics-row g-0 justify-content-between">
+    <section class="row metrics-row g-0">
 
-        <div class="col-auto">
+        <div class="col-auto metric-column">
             <div class="card metric-card">
                 <div class="card-body">
                     <h2 class="metric-value fw-semibold mb-2">5</h2>
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto metric-column">
             <div class="card metric-card">
                 <div class="card-body">
                     <h2 class="metric-value fw-semibold mb-2">78%</h2>
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="col-auto">
+        <div class="col-auto metric-column">
             <div class="card metric-card">
                 <div class="card-body">
                     <h2 class="metric-value fw-semibold mb-2">2</h2>
@@ -48,12 +48,12 @@
             Administrar
         </h2>
 
-        <hr class="mt-0 mb-0">
+        <hr class="admin-divider mt-0 mb-0">
 
-        <div class="row admin-row g-0 justify-content-between">
+        <div class="row admin-row g-0">
 
             <!-- Preferencias -->
-            <div class="col-auto">
+            <div class="col-auto admin-column">
                 <div class="card admin-card">
                     <div class="card-body d-flex flex-column align-items-start">
 
@@ -68,7 +68,6 @@
                         <button
                             type="button"
                             class="btn btn-outline-primary admin-button"
-                            routerLink="/preferences"
                         >
                             Ver más
                         </button>
@@ -78,7 +77,7 @@
             </div>
 
             <!-- Alarmas recurrentes -->
-            <div class="col-auto">
+            <div class="col-auto admin-column">
                 <div class="card admin-card">
                     <div class="card-body d-flex flex-column align-items-start">
 
@@ -93,7 +92,7 @@
                         <button
                             type="button"
                             class="btn btn-outline-primary admin-button"
-                            routerLink="/new-alarm"
+                            [routerLink]="['/recurring-alarms']"
                         >
                             Ver más
                         </button>
@@ -103,7 +102,7 @@
             </div>
 
             <!-- Historial -->
-            <div class="col-auto">
+            <div class="col-auto admin-column">
                 <div class="card admin-card">
                     <div class="card-body d-flex flex-column align-items-start">
 
@@ -131,4 +130,6 @@
 
     </section>
 
-</main>
+
+
+</div>
