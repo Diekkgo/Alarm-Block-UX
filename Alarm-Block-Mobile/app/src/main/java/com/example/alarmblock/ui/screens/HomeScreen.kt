@@ -2,6 +2,7 @@ package com.example.alarmblock.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -42,6 +43,7 @@ import com.example.alarmblock.ui.theme.White
 @Composable
 fun HomeScreen(
     onCreateAlarm: () -> Unit,
+    onSimulateAlarm: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     // Standalone toggle for the one saved alarm shown on this mock home screen.
@@ -142,7 +144,12 @@ fun HomeScreen(
             color = Gray,
             fontSize = 13.sp,
             textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable {
+                    onSimulateAlarm()
+                }
+                .padding(vertical = 8.dp),
         )
     }
 }
