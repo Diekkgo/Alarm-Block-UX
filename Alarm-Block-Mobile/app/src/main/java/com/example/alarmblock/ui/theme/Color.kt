@@ -2,10 +2,18 @@ package com.example.alarmblock.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Same brand palette used in Alarm-Block-Web (src/styles.css)
+val Navy = Color(0xFF1E2664)
+val Gold = Color(0xFFF5A623)
+val Gray = Color(0xFF888888)
+val Success = Color(0xFF2E8B57)
+val Alert = Color(0xFFD64545)
+val White = Color(0xFFFFFFFF)
+val Lavender = Color(0xFFB9BFDD)
+val Cream = Color(0xFFFFFBF2)
+val Black = Color(0xFF000000)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Extra neutrals used for dividers / info surfaces (not in the web palette,
+// picked to match the light gray seen in the mobile mockups)
+val DividerGray = Color(0xFFE4E4E4)
+val InfoBackground = Color(0xFFF2F2F2)
