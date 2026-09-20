@@ -12,4 +12,5 @@ object AlarmBlockRoutes {
     const val MandatoryMission = "mandatory_mission"
     const val MandatoryMissionConfirmation = "mandatory_mission_confirmation"
     const val AlarmOff = "alarm_off"
+    const val StreakDetails = "streak_details"
 }

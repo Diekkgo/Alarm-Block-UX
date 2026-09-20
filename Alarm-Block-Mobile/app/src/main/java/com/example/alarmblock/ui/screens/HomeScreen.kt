@@ -44,6 +44,7 @@ import com.example.alarmblock.ui.theme.White
 fun HomeScreen(
     onCreateAlarm: () -> Unit,
     onSimulateAlarm: () -> Unit,
+    onViewStreak: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     // Standalone toggle for the one saved alarm shown on this mock home screen.
@@ -69,7 +70,10 @@ fun HomeScreen(
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(12.dp))
                 .background(Gold)
-                .padding(16.dp),
+                .clickable {
+                    onViewStreak()
+                }
+                .padding(16.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),

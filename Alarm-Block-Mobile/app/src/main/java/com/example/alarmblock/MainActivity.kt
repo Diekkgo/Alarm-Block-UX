@@ -22,6 +22,7 @@ import com.example.alarmblock.ui.screens.NewAlarmLimitsScreen
 import com.example.alarmblock.ui.screens.NewAlarmSetupScreen
 import com.example.alarmblock.ui.screens.StartAlarmScreen
 import com.example.alarmblock.ui.screens.AlarmOffScreen
+import com.example.alarmblock.ui.screens.StreakDetailsScreen
 import com.example.alarmblock.ui.theme.AlarmBlockTheme
 
 class MainActivity : ComponentActivity() {
@@ -49,6 +50,9 @@ class MainActivity : ComponentActivity() {
                                 },
                                 onSimulateAlarm = {
                                     navController.navigate(AlarmBlockRoutes.StartAlarm)
+                                },
+                                onViewStreak = {
+                                    navController.navigate(AlarmBlockRoutes.StreakDetails)
                                 },
                             )
                         }
@@ -119,6 +123,14 @@ class MainActivity : ComponentActivity() {
                                             inclusive = false
                                         }
                                     }
+                                }
+                            )
+                        }
+
+                        composable(AlarmBlockRoutes.StreakDetails) {
+                            StreakDetailsScreen(
+                                onBack = {
+                                    navController.popBackStack()
                                 }
                             )
                         }
