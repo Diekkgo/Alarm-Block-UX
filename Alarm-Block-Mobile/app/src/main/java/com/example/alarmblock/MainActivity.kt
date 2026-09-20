@@ -21,6 +21,7 @@ import com.example.alarmblock.ui.screens.NewAlarmConfirmationScreen
 import com.example.alarmblock.ui.screens.NewAlarmLimitsScreen
 import com.example.alarmblock.ui.screens.NewAlarmSetupScreen
 import com.example.alarmblock.ui.screens.StartAlarmScreen
+import com.example.alarmblock.ui.screens.AlarmOffScreen
 import com.example.alarmblock.ui.theme.AlarmBlockTheme
 
 class MainActivity : ComponentActivity() {
@@ -78,7 +79,7 @@ class MainActivity : ComponentActivity() {
                         composable(AlarmBlockRoutes.StartAlarm) {
                             StartAlarmScreen(
                                 onTurnOff = {
-                                    navController.popBackStack()
+                                    navController.navigate(AlarmBlockRoutes.AlarmOff)
                                 },
                                 onSnooze = {
                                     navController.navigate(AlarmBlockRoutes.MandatoryMission)
@@ -103,6 +104,18 @@ class MainActivity : ComponentActivity() {
                                 onBackToAlarm = {
                                     navController.navigate(AlarmBlockRoutes.StartAlarm) {
                                         popUpTo(AlarmBlockRoutes.StartAlarm) {
+                                            inclusive = false
+                                        }
+                                    }
+                                }
+                            )
+                        }
+
+                        composable(AlarmBlockRoutes.AlarmOff) {
+                            AlarmOffScreen(
+                                onBackHome = {
+                                    navController.navigate(AlarmBlockRoutes.Home) {
+                                        popUpTo(AlarmBlockRoutes.Home) {
                                             inclusive = false
                                         }
                                     }
