@@ -49,23 +49,8 @@ Al apagar la alarma se muestra una pantalla de confirmación y se actualiza visu
 
 Cuando se selecciona la opción **Posponer**, la aplicación dirige al usuario a una misión obligatoria.
 
-Para continuar, se debe resolver la siguiente operación matemática:
+Para continuar, basta con presionar el botón **Verificar**, resolver la operación es opcional.
 
-```text
-7 + 5 = ?
-```
-
-**Para completar la misión se debe ingresar explícitamente:**
-
-```text
-12
-```
-
-Después de escribir **12**, se debe presionar el botón **Verificar**.
-
-Si la respuesta es correcta, se muestra la confirmación indicando que la alarma fue pospuesta.
-
-> **Importante:** Para efectos de esta versión de demostración, la respuesta esperada por la aplicación es `12`.
 
 ### Confirmación de alarma pospuesta
 
@@ -90,24 +75,46 @@ Para ejecutar el proyecto:
 
 1. Abrir el proyecto en **Android Studio**.
 2. Esperar a que Gradle sincronice las dependencias.
-3. Seleccionar un emulador o dispositivo Android disponible con Android 11 - API 30.
+3. Seleccionar un emulador o dispositivo Android disponible con Android 11 (API 30). Para las pruebas en emulador se recomienda utilizar un Pixel 5 con Android 11 (API 30).
 4. Ejecutar la aplicación mediante **Run 'app'**.
 
 ## Flujo recomendado para probar la aplicación
 
-Para comprobar el flujo de la alarma:
+### Para comprobar el flujo de la alarma:
 
 1. Iniciar la aplicación.
 2. En la pantalla principal seleccionar **Simular alarma**.
 3. En la pantalla de la alarma seleccionar **Posponer**.
 4. Se mostrará la pantalla **Misión obligatoria**.
-5. En la operación `7 + 5 = ?`, ingresar **12**.
-6. Presionar **Verificar**.
-7. Se mostrará la confirmación de que la alarma fue pospuesta.
+5. Presionar **Verificar** (Resolver la operación es opcional).
+6. Se mostrará la confirmación de que la alarma fue pospuesta.
 
-Para probar el flujo de apagado:
+### Para probar el flujo de apagado:
 
 1. Seleccionar **Simular alarma**.
 2. Presionar **Apagar**.
 3. Se mostrará la pantalla de confirmación correspondiente.
 4. Presionar **Volver al Inicio**.
+
+### Para crear una nueva alarma
+
+1. Seleccionar **Nueva Alarma**.
+2. Utilizar los botones (+) y (-) para aumentar o disminuir la hora de la alarma (opcional).
+3. Ingresar un nombre para la alarma (opcional).
+4. Seleccionar un sonido (opcional).
+5. Presionar **Siguiente**.
+6. En la pantalla de configuración del límite de posposición, utilizar los botones (+) y (-) para aumentar o disminuir el número de veces que la alarma puede posponerse.
+7. Presionar **Guardar alarma**.
+
+### Para ver la racha
+
+1. En la pantalla principal, seleccionar la tarjeta que muestra los días consecutivos sin posponer la alarma.
+2. Se mostrará el detalle de la racha del usuario y el historial de los últimos días.
+
+## Commits
+
+Cada integrante del equipo adoptó una estrategia de trabajo y publicación de commits de acuerdo con la organización definida durante el desarrollo de la aplicación.
+
+- **Carlos Zerpa:** realizó sus cambios en la rama `feat/mobile-screens-czerpa`, en la cual se encuentran los commits correspondientes al desarrollo de las pantallas asignadas.
+
+- **Diego Gómez:** realizó y publicó sus commits directamente sobre la rama `main`.
