@@ -94,11 +94,9 @@ class MainActivity : ComponentActivity() {
                         composable(AlarmBlockRoutes.MandatoryMission) {
                             MandatoryMissionScreen(
                                 onVerify = { answer ->
-                                    if (answer == "12") {
-                                        navController.navigate(
-                                            AlarmBlockRoutes.MandatoryMissionConfirmation
-                                        )
-                                    }
+                                    navController.navigate(
+                                        AlarmBlockRoutes.MandatoryMissionConfirmation
+                                    )
                                 }
                             )
                         }
